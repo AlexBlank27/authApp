@@ -1,9 +1,10 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import {View, TextInput, Button, Alert} from "react-native";
 import {createUserWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../services/Firebase"; // Adjust the import path as necessary
+import {styles} from "../styles/StylesRegister";
 
-export async function RegisterScreen({navigation}){
+export default function RegisterScreen({navigation}){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -18,11 +19,10 @@ export async function RegisterScreen({navigation}){
     }
 
     return (
-        <View style={{flex:1,justifyContent:"center",padding:20}}>
-            <TextInput placeholder="Email" value={email} onChangeText={setEmail} style={styles.input} />
+        <View style={styles.container}>
+            <TextInput placeholder="Email" value={email} onChangeText={setEmail} style={styles.input} autoCapitalize="none" />
             <TextInput placeholder="Contraseña" value={password} onChangeText={setPassword} secureTextEntry style={styles.input}/>
             <Button title="Registrarse" onPress={handleRegister} />
-
         </View>
     );
 }
