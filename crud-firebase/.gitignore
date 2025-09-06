@@ -36,3 +36,6 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 src/services/Firebase.js
+
+#expo excludes
+.expo/

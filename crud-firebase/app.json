@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "crud-firebase",
-    "slug": "crud-firebase",
+    "slug": "cardstore",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,10 +20,17 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.alexblank.cardstore"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4be391ec-ba45-427b-99a9-0f9bf78332cc"
+      }
+    },
+    "owner": "alexblank"
   }
 }
